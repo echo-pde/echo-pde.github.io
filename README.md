@@ -1,2 +1,2 @@
-# echo-pde.github.io
-Project page for the paper: "ECHO"
+# enma-pde.github.io
+Project Page for "ECHO".

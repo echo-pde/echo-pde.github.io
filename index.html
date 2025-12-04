@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Efficient Generative Transformer Operators for Million-Point PDEs">
+  <meta property="og:title" content="efficient masked generative modeling physics encoding"/>
+  <meta property="og:description" content="efficient masked generative modeling physics encoding"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="../images/echo/archi.pdf" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="tokenwise generative modeling physics encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Efficient Generative Transformer Operators for Million-Point PDEs</title>
+  
+  
+  <link rel="icon" type="image/x-icon" href="static/images/echo/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="video-wrapper header">
+
+    <div class="bg-overlay"></div>
+
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <!-- Title -->
+              <h1 class="xtitle is-1 publication-title">
+                Efficient Generative Transformer Operators for Million-Point PDEs
+              </h1>
+          
+              <!-- Authors: centered -->
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://itsakk.github.io" target="_blank">Armand Kassaï Koupaï<sup>1*</sup></a></span>
+                <span class="author-block"><a href="https://2ailesb.github.io/index.html" target="_blank">Lise Le Boudec<sup>1*</sup></a></span>
+                <span class="author-block"><a href="https://pages.isir.upmc.fr/gallinari/">Patrick Gallinari <sup>1,2</sup></a></span>
+              </div>
+              <!-- Institutions: left-aligned -->
+              <div class="is-size-5 publication-institutions">
+                <span class="institution-block"><sup>1</sup> Sorbonne Université, CNRS, ISIR, F-75005 Paris, France</span><br>
+                <span class="institution-block"><sup>2</sup> Criteo AI Lab, Paris, France</span><br>
+                <span class="institution-block"><sup>*</sup> Equal contribution. </span>
+              </div>
+            <div class="column has-text-centered">
+                <div class="publication-links">
+                        <!-- Arxiv PDF link -->
+                    <span class="link-block">
+                        <a href="https://arxiv.org/pdf/" target="_blank"
+                        class="external-link ">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                        </a>
+                    </span>
+                    <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/" target="_blank"
+                      class="external-link ">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                      </a>
+                    </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                    <a href="code.html" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+
+                <!-- ICLR link -->
+                <!-- <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link ">
+                    <span class="icon-wrapper">
+                      <img src="images/" alt="NeurIPS logo">
+                    </span>
+                    <span>ICLR</span>
+                    </a>
+                </span> -->
+
+                <!-- HF link
+                <span class="link-block">
+                    <a href="https://huggingface.co/datasets/2ailesB/neural-parametric-solver-datasets" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                        <i> <img src="images/echo/hfbw.svg" alt="Hugging Face"/></i>
+                    </span>
+                    <span>Datasets</span>
+                    </a>
+                </span> -->
+
+            </div>
+          </div>
+          <!-- <div class="publication-conf">
+            <h2>
+                SPOTLIGHT poster at <a href="" >NeurIPS 2025</a>. 
+            </h2>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce ECHO, a transformer–operator framework for generating million-
+            point PDE trajectories. While existing neural operators (NOs) have shown promise
+            for solving partial differential equations, they remain limited in practice due to
+            poor scalability on dense grids, error accumulation during dynamic unrolling,
+            and task-specific design. ECHO addresses these challenges through three key
+            innovations. (i) It employs a hierarchical convolutional encode–decode architecture
+            that achieves a 100× spatio-temporal compression while preserving fidelity on
+            mesh points. (ii) It incorporates a training and adaptation strategy that enables
+            high-resolution PDE solution generation from sparse input grids. (iii) It adopts a
+            generative modeling paradigm that learns complete trajectory segments, mitigating
+            long-horizon error drift. The training strategy decouples representation learning
+            from downstream task supervision, allowing the model to tackle multiple tasks
+            such as trajectory generation, forward and inverse problems, and interpolation. The
+            generative model further supports both conditional and unconditional generation.
+            We demonstrate state-of-the-art performance on million-point simulations across
+            diverse PDE systems featuring complex geometries, high-frequency dynamics, and
+            long-term horizons. </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Training a neural Solver -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-centered">
+        <div class="column is-10 content-column">
+          <h2 class="title">The ECHO framework</h2>
+          
+          <p class="has-text-justified"> 
+            ECHO is a transformer-based operator built on an encode–generate–decode framework designed for efficient spatio-temporal PDE modeling at scale. It
+            allows us to handle million-point trajectories on arbitrary domains (see Figure bellow). ECHO is the first generative transformer operator addressing under a unified formalism forward and
+            inverse tasks, while operating in a compressed latent space, allowing scaling to high-resolution inputs
+            from arbitrary domains.
+          </p>
+
+          <img src="images/echo/archi.jpg" width="100%" alt="ECHO Framework">
+
+          <h3><strong>The design of our model ECHO, follow 3 keys principles: </strong></h3>
+          <p class="has-text-justified">
+          <ul class="contrib-list">
+            <li> <strong> (i) Hierarchical spatio-temporal compression: </strong> For realistic deployment, compression must act jointly on
+              space and time. We advocate deep encoder–decoders that reduce resolution hierarchically, yielding
+              compact yet faithful spatio-temporal latents. </li>
+            <li> <strong> (ii) Rethinking the auto-regressive process: </strong> Next-frame(s) prediction remains the dominant training paradigm for the process, 
+              while suffering from error drifts. We introduce a robust procedure that generates entire trajectory segments conditioned on selected frames. It captures
+              long-range temporal dependencies and enforces horizon-wide consistency. </li>
+            <li> <strong> (iii) deterministic to generative modeling: </strong> we leverage a stochastic modeling formulation for
+              generating trajectory distributions. This allows us to deal with partial or noisy
+              observations, and to cope with the physical information loss inherent to the compression step.</li>
+          </ul></p>
+
+          <p class="has-text-justified">
+          The figure below illustrates the benefits of principles (i)–(iii): (left) our spatio-temporal encoder achieves a compression ratio versus relative L2
+          error that is markedly superior to state-of-the-art baselines enabling large scale applications; (center)
+          its trajectory-generation procedure is far less prone to error accumulation, enabling long-horizon
+          forecasts; and (right) the generative modeling paradigm outperforms deterministic alternatives.
+          </p>
+          <img src="images/echo/experimental_analysis.jpg" width="100%" alt="Motivation for ECHO. ">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Training -->
+
+<!-- Results -->
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+        <div class="column is-centered">
+        <div class="column is-10 content-column">
+          <h2 class="title">Comparison with baselines</h2>
+          <p class="has-text-justified">
+          </p>
+          <div class="column has-text-centered">
+            <img  src="images/echo/process.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+            <img  src="images/echo/encoder.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+          </div>
+        </div>
+        <div class="column is-10 content-column">
+          <h2 class="title">Scaling and Generative Capabilities</h2>
+          <p class="has-text-justified">
+          </p>
+          <div class="column has-text-centered">
+            <img  src="images/echo/scaling.png" style="max-width:400px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+          </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+    <div class="column is-centered">
+        <h2 class="title">Visualizations</h2>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/flux_vorticity_1024_vis.jpg" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/flux_gray_scott_reaction_diffusion_vis.jpg" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">NeurIPS 2025 Poster</h2>
+        <iframe  src="images/echo/poster-grand-V2.pdf" width="100%" height="550" alt="Poster for ICLR 2025 presentation">
+      </iframe>
+      </div>
+    </div>
+  </section> -->
+<!-- End paper poster -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX
+      </h2>
+      <pre><code>
+
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+            You are free to borrow the template of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
