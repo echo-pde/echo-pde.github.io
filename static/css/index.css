@@ -23,7 +23,7 @@ body {
 /* ✅ Change background color when hovering over the link or icon */
 .link-block a:hover .icon-wrapper,
 .icon-wrapper:hover {
-  background-color: rgb(243, 189, 11); /* yellow on hover */
+  background-color: rgb(40, 180, 40); /* yellow on hover */
 }
 
 .link-block .icon img,
@@ -137,8 +137,7 @@ body {
   margin-top: 20px; /* space above institutions */
   font-size: 24px;
   font-weight: bold;
-  color: rgb(243, 189, 11);
-  /* color: rgb(224, 171, 228); */
+  color: rgb(20, 61, 27);
 }
 
 /* Keep the column block centered on the page */
