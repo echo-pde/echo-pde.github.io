@@ -184,38 +184,57 @@
     <div class="container">
       <div class="column is-centered">
         <div class="column is-10 content-column">
+
+          <h2 class="title"> Our recipe to design a neural operator for PDEs </h2>
+          <p class="has-text-justified">
+            <ul class="contrib-list">
+              <li> <strong> Progressive hierarchical spatio-temporal compression. </strong> Most encoders downsample only spatial dimensions and perform compression in a single step, leading to poor scalability and information loss. 
+                We introduce a hierarchical encoder–decoder that progressively compresses both space and time, yielding
+                compact yet faithful spatio-temporal representations.  
+              </li>
+              <li> <strong> Trajectory-level generation. </strong> Autoregressive prediction remains the dominant paradigm, but suffers from error drift. We instead generate complete
+                trajectory segments, enforcing horizon-wide consistency, mitigating error drift, and improving long-
+                term stability. 
+              </li>
+              <li> <strong> Generative modeling in compressed latent space. </strong> We adopt
+                a stochastic formulation that models distributions over full trajectories rather
+                than deterministic predictions, enabling
+                robustness to partial observations and uncertainty. 
+              </li>
+            </ul>
+          </p>
+          
+          <img src="images/echo/experimental_analysis.jpg" width="100%" alt="Motivation for ECHO. ">
+          <p class="has-text-justified"> 
+            The figure below illustrates the benefits of principles (i)–(iii): (left) our spatio-temporal encoder achieves a compression ratio versus relative L2
+            error that is markedly superior to state-of-the-art baselines enabling large scale applications; (center)
+            its trajectory-generation procedure is far less prone to error accumulation, enabling long-horizon
+            forecasts; and (right) the generative modeling paradigm outperforms deterministic alternatives.
+          </p>
+          
+          <br>
+
           <h2 class="title">The ECHO framework</h2>
           
           <p class="has-text-justified"> 
-            We introduce \textbf{ECHO}, a transformer-based neural operator for large-scale PDE modeling that learns to \emph{generate full trajectories in compressed spatio-temporal latent spaces}. 
-            Scaling neural operators to high-resolution systems remains challenging: dense grids are computationally prohibitive, and autoregressive solvers accumulate errors over long horizons. ECHO addresses both issues by jointly compressing space and time and replacing step-by-step prediction with trajectory-level generation.
-            ECHO combines a hierarchical encoder–decoder achieving up to 100× compression, a staged training strategy for high-resolution fidelity, and a latent generative process that models distributions over complete trajectories, improving long-term consistency.
-            This formulation enables a single model to handle forward prediction, backward prediction, and interpolation. Across large-scale 2D and 3D benchmarks, ECHO achieves state-of-the-art performance and scales to million-point simulations with complex dynamics.
+            We instantiate these principles in ECHO, a transformer-based neural operator for large-scale PDE
+            modeling. By combining hierarchical compression with trajectory-level generative modeling, ECHO
+            enables efficient learning and inference on million-point systems defined on arbitrary domains, where
+            most SOTA neural operators fail. Critical to this capability is the efficient spatio-temporal representa-
+            tion. Figure 1 demonstrates the impact of each component: (left) significantly improved accuracy
+            at high compression ratios as an enabler of large-scale applications, (center) a trajectory generation
+            mechanism that reduces long-horizon error accumulation, and (right) a generative modeling paradigm
+            that offers consistent gains over deterministic baselines. ECHO achieves state-of-the-art performance
+            on large-scale 2D and 3D PDE benchmarks, scaling to simulations with up to 20 million points,
+            where existing methods fail.
+            In addition, we introduce a staged training strategy that enables high-fidelity learning under memory
+            constraints and a unified formulation that supports forward prediction, backward prediction, interpo-
+            lation, and long-horizon forecasting within a single model. This enables us to address a variety of
+            problems in a zero-shot setting.
           </p>
 
           <img src="images/echo/faro-archi-generale-reb.jpg" width="100%" alt="ECHO Framework">
 
-          <h3><strong>The design of our model ECHO, follow 3 keys principles: </strong></h3>
-          <p class="has-text-justified">
-          <ul class="contrib-list">
-            <li> <strong> (i) Hierarchical spatio-temporal compression: </strong> For realistic deployment, compression must act jointly on
-              space and time. We advocate deep encoder–decoders that reduce resolution hierarchically, yielding
-              compact yet faithful spatio-temporal latents. </li>
-            <li> <strong> (ii) Rethinking the auto-regressive process: </strong> Next-frame(s) prediction remains the dominant training paradigm for the process, 
-              while suffering from error drifts. We introduce a robust procedure that generates entire trajectory segments conditioned on selected frames. It captures
-              long-range temporal dependencies and enforces horizon-wide consistency. </li>
-            <li> <strong> (iii) deterministic to generative modeling: </strong> we leverage a stochastic modeling formulation for
-              generating trajectory distributions. This allows us to deal with partial or noisy
-              observations, and to cope with the physical information loss inherent to the compression step.</li>
-          </ul></p>
-
-          <p class="has-text-justified">
-          The figure below illustrates the benefits of principles (i)–(iii): (left) our spatio-temporal encoder achieves a compression ratio versus relative L2
-          error that is markedly superior to state-of-the-art baselines enabling large scale applications; (center)
-          its trajectory-generation procedure is far less prone to error accumulation, enabling long-horizon
-          forecasts; and (right) the generative modeling paradigm outperforms deterministic alternatives.
-          </p>
-          <img src="images/echo/experimental_analysis.jpg" width="100%" alt="Motivation for ECHO. ">
         </div>
       </div>
     </div>
@@ -230,7 +249,7 @@
         <div class="container">
         <div class="column is-centered">
         <div class="column is-10 content-column">
-          <h2 class="title">Comparison with baselines</h2>
+          <h2 class="title">Experimental Results</h2>
           <p class="has-text-justified">
           </p>
           <div class="column has-text-centered">
