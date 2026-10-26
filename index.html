@@ -187,13 +187,13 @@
           <h2 class="title">The ECHO framework</h2>
           
           <p class="has-text-justified"> 
-            ECHO is a transformer-based operator built on an encode–generate–decode framework designed for efficient spatio-temporal PDE modeling at scale. It
-            allows us to handle million-point trajectories on arbitrary domains (see Figure bellow). ECHO is the first generative transformer operator addressing under a unified formalism forward and
-            inverse tasks, while operating in a compressed latent space, allowing scaling to high-resolution inputs
-            from arbitrary domains.
+            We introduce \textbf{ECHO}, a transformer-based neural operator for large-scale PDE modeling that learns to \emph{generate full trajectories in compressed spatio-temporal latent spaces}. 
+            Scaling neural operators to high-resolution systems remains challenging: dense grids are computationally prohibitive, and autoregressive solvers accumulate errors over long horizons. ECHO addresses both issues by jointly compressing space and time and replacing step-by-step prediction with trajectory-level generation.
+            ECHO combines a hierarchical encoder–decoder achieving up to 100× compression, a staged training strategy for high-resolution fidelity, and a latent generative process that models distributions over complete trajectories, improving long-term consistency.
+            This formulation enables a single model to handle forward prediction, backward prediction, and interpolation. Across large-scale 2D and 3D benchmarks, ECHO achieves state-of-the-art performance and scales to million-point simulations with complex dynamics.
           </p>
 
-          <img src="images/echo/archi.jpg" width="100%" alt="ECHO Framework">
+          <img src="images/echo/faro-archi-generale-reb.jpg" width="100%" alt="ECHO Framework">
 
           <h3><strong>The design of our model ECHO, follow 3 keys principles: </strong></h3>
           <p class="has-text-justified">
@@ -267,6 +267,36 @@
       <div class="item">
         <!-- Your image here -->
         <img src="images/echo/flux_gray_scott_reaction_diffusion_vis.jpg" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/flux_rayleigh_benard_page-0001.jpg" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/flux_active_matter_page-0001.jpg" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/flux_acoustic_scattering_maze_page-0001.jpg" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/pred_eagle_200_1554331-eagle-efedius.pt.png" alt="Qualitative results of reconstruction using ECHO.  "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/echo/pred_eagle_20_1554331-eagle-efedius.pt(2).png" alt="Qualitative results of reconstruction using ECHO.  "/>
         <h2 class="subtitle has-text-centered">
         </h2>
       </div>
