@@ -250,21 +250,116 @@
         <div class="column is-centered">
         <div class="column is-10 content-column">
           <h2 class="title">Experimental Results</h2>
-          <p class="has-text-justified">
-          </p>
-          <div class="column has-text-centered">
-            <img  src="images/echo/process.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
-            <img  src="images/echo/encoder.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
-          </div>
+
+            <h3 class="title"> Scaling </h3>
+            <p class="has-text-justified">
+            <div class="column has-text-centered">
+                  <img  src="images/echo/scaling_table.png" style="max-width:900px; width:100%;" height="550" alt="Failure of baseline to generate 20M points, where ECHO succeeds. ">
+                  <img  src="images/echo/scaling-figure.png" style="max-width:900px; width:100%;" height="550" alt="Memory requirements wrt number of generated points. ">
+            </div>
+            </p>
+
+            <h3 class="title"> Study of the process & multi tasking Capabilities </h3>
+            <p class="has-text-justified">
+            </p>
+            <div class="column has-text-centered">
+              <img  src="images/echo/process-2d.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+              <img  src="images/echo/process-3d.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+            </div>
+
+            <h3 class="title"> Study of the Encoder & Decoder Architecture </h3>
+            <p class="has-text-justified">
+            </p>
+            <div class="column has-text-centered">
+              <img  src="images/echo/encoder.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+            </div>
+
+            <h3 class="title"> Stability on long-range generation </h3>
+            <p class="has-text-justified">
+            </p>
+            <div class="column has-text-centered">
+              <img  src="images/echo/long-range.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+            </div>
+
+            <h3 class="title"> Probabilistic analysis </h3>
+            <p class="has-text-justified">
+            </p>
+            <div class="column has-text-centered">
+              <img  src="images/echo/proba.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+            </div>
+
+            <h3 class="title"> Additional Results </h3>
+            <p class="has-text-justified">
+              Our paper presents a comprehensive analysis of ECHO and its capabilities. 
+              We deeply study the architecture of ECHO and its performance on various benchmarks. 
+              To this end, we provide :
+                <ul class="contrib-list"> 
+                  <li>
+                    Out-of-distribution evaluation on the Vorticity equation: we evaluate the OOD capacities
+                    of ECHO on new unseen physical parameters.
+                  </li>
+                  <li>
+                    Long-range prediction on Shallow-Water, where ECHO is evaluated up to 4×its training
+                    horizon. We also provide a spectra analysis on the Vorticity equation.
+                  </li>
+                  <li>
+                    Generative trajectory sampling in an unconditional setting on Shallow-Water, including
+                    Fréchet Physics Distance (FPD) and efficiency metrics.
+                  </li>
+                  <li>
+                    Probabilistic evaluation of ECHO with 16-member ensembles (CRPS, calibration error,
+                    spread-skill ratio) on forward and backward prediction.
+                  </li>
+                  <li>
+                    Initial value problem (IVP) evaluation, where ECHO generates full trajectories from a
+                    single initial frame and PDE parameters.
+                  </li>
+                  <li>
+                    Temporal interpolation tasks, in which ECHO reconstructs long missing segments between
+                    observed frames across four datasets.
+                  </li>
+                  <li>
+                    Encoding sparse data / spatial interpolation, where only 50% or 10% of the input grid
+                    is observed and the full grid must be reconstructed, with 10% constituting a strong OOD
+                    sparsity level.
+                  </li>
+                  <li>
+                    In addition, we provide a set of ablation studies analyzing:
+                    <ul>
+                      <li>
+                        the impact of hierarchical compression depth in the encoder on reconstruction accuracy;
+                      </li>
+                      <li>
+                        the contribution of the refinement stage for full-resolution Vorticity reconstruction;
+                      </li>
+                      <li>
+                        the robustness of the flow-matching generative process to the choice of ODE solver and
+                        number of integration steps at sampling time. 
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              
+              Please refer to the paper for these additional expriments and analysis. 
+              
+            </p>
+            <div class="column has-text-centered">
+            </div>
+
+
         </div>
-        <div class="column is-10 content-column">
+
+
+
+        <!-- <div class="column is-10 content-column">
           <h2 class="title">Scaling and Generative Capabilities</h2>
           <p class="has-text-justified">
           </p>
           <div class="column has-text-centered">
             <img  src="images/echo/scaling.png" style="max-width:400px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
           </div>
-        </div>
+        </div> -->
+
         </div>
         </div>
     </div>
